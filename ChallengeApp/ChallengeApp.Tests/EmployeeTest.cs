@@ -3,43 +3,43 @@ namespace ChallengeApp.Tests
     public class EmployeeTest
     {
         [Test]
-        public void WhenUserCollectOnlyPositiveScores_ShouldCorrectResult()
+        public void MinGradeTest()
         {
             //arrange
-            var employee1 = new Employee("Mateusz", "Kowalski", 26);
-            employee1.AddScore(5);
-            employee1.AddScore(6);
-            employee1.AddScore(11);
+            var employee = new Employee("Mateusz", "Kowalski");
+            employee.AddGrade(5);
+            employee.AddGrade(6);
+            employee.AddGrade(11);
             // act
-            var result = employee1.Result;
+            var result = employee.GetStatistics()   ;
             // assert
-            Assert.AreEqual(22, result); 
+            Assert.AreEqual(5, result.Min); 
         }
         [Test]
-        public void WhenUserCollectOnlyNegativeScores_ShouldCorrectResult()
+        public void MaxGradeTest()
         {
             //arrange
-            var employee2 = new Employee("Monika", "Sek", 31);
-            employee2.AddScore(-2);
-            employee2.AddScore(-4);
-            employee2.AddScore(-6);
+            var employee = new Employee("Monika", "Sek");
+            employee.AddGrade(3);
+            employee.AddGrade(7);
+            employee.AddGrade(2);
             // act
-            var result = employee2.Result;
+            var result = employee.GetStatistics();
             // assert
-            Assert.AreEqual(-12, result);
+            Assert.AreEqual(7, result.Max);
         }
         [Test]
-        public void WhenUserCollectMixedScores_ShouldCorrectResult()
+        public void AvarageGradeTest()
         {
             //arrange
-            var employee3 = new Employee("Zuzia", "Graszka", 42);
-            employee3.AddScore(-2);
-            employee3.AddScore(7);
-            employee3.AddScore(5);
+            var employee = new Employee("Zuzia", "Graszka");
+            employee.AddGrade(4);
+            employee.AddGrade(6);
+            employee.AddGrade(2);
             // act
-            var result = employee3.Result;
+            var result = employee.GetStatistics();
             // assert
-            Assert.AreEqual(10, result);
+            Assert.AreEqual(4, result.Avarage);
         }
     }
 
