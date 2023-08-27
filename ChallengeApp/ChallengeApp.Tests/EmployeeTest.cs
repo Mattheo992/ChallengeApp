@@ -13,7 +13,7 @@ namespace ChallengeApp.Tests
             // act
             var result = employee.GetStatistics()   ;
             // assert
-            Assert.AreEqual(5, result.Min); 
+            Assert.AreEqual(5f, result.Min); 
         }
         [Test]
         public void MaxGradeTest()
@@ -26,7 +26,7 @@ namespace ChallengeApp.Tests
             // act
             var result = employee.GetStatistics();
             // assert
-            Assert.AreEqual(7, result.Max);
+            Assert.AreEqual(7f, result.Max);
         }
         [Test]
         public void AvarageGradeTest()
@@ -39,7 +39,7 @@ namespace ChallengeApp.Tests
             // act
             var result = employee.GetStatistics();
             // assert
-            Assert.AreEqual(4, result.Avarage);
+            Assert.AreEqual(4f, result.Avarage);
         }
     }
 
