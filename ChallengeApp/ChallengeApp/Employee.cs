@@ -38,14 +38,8 @@
         }
         public void AddGrade(long grade)
         {
-            if (grade >= 0 && grade <= 100)
-            {
-                this.grades.Add(grade);
-            }
-            else
-            {
-                throw new Exception("Invalid grade value");
-            }
+            float result = (float)grade;
+            this.AddGrade(result);
         }
         public void AddGrade(int grade)
         {
