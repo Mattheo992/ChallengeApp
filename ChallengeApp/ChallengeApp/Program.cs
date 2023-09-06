@@ -5,7 +5,8 @@ Console.WriteLine("===========================================");
 Console.WriteLine();
 
 
-var employee = new Employee();
+var employee = new EmployeeInFile("Mateusz", "Stępniak");
+
 
 while (true)
 {
@@ -15,7 +16,7 @@ while (true)
     {
         break;
     }
-    
+
     try
     {
         employee.AddGrade(input);
@@ -25,7 +26,6 @@ while (true)
     {
         Console.WriteLine($"Exception catched: {e.Message}");
     }
-
 }
 var statictics = employee.GetStatistics();
 Console.WriteLine($"AVG: {statictics.Average}");
