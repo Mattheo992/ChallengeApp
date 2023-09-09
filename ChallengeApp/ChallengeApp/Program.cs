@@ -2,6 +2,7 @@
 
 Console.WriteLine("Witamy w Programie Ocena Pracownika v1 do oceny Pracowników");
 Console.WriteLine("===========================================");
+Console.WriteLine("Po dodaniu ocen naciśnij q aby przejść do podsumowania");
 Console.WriteLine();
 
 
